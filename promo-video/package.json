@@ -1,0 +1,21 @@
+{
+  "name": "campuscraft-promo",
+  "version": "1.0.0",
+  "description": "CampusCraft promotional video",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts CampusCraftPromo out/promo.mp4",
+    "build": "remotion render src/index.ts CampusCraftPromo out/promo.mp4 --codec h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.421",
+    "@remotion/google-fonts": "^4.0.421",
+    "@remotion/player": "^4.0.421",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.421",
+    "typescript": "^5.9.3"
+  }
+}
