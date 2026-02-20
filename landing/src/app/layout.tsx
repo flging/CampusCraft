@@ -122,6 +122,15 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pressStart2P.variable}>
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VWYH3MR49X"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VWYH3MR49X');`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
