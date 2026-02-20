@@ -82,6 +82,6 @@ body {
 }
 
 @keyframes splash-pulse {
-  0%, 100% { transform: rotate(-20deg) scale(1); }
-  50% { transform: rotate(-20deg) scale(1.15); }
+  0%, 100% { transform: rotate(-20deg) translateX(75px) scale(1); }
+  50% { transform: rotate(-20deg) translateX(75px) scale(1.15); }
 }

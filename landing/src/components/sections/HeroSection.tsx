@@ -47,9 +47,9 @@ export default function HeroSection() {
             />
           </h1>
           <p
-            className="absolute -right-4 sm:-right-6 md:-right-8 -bottom-1 sm:-bottom-2 md:-bottom-4 font-pixel-bold text-mc-gold text-sm sm:text-lg md:text-2xl whitespace-nowrap origin-center"
+            className="absolute -right-2 sm:-right-4 md:-right-6 bottom-[30%] sm:bottom-[28%] md:bottom-[26%] font-bold text-[#FFFF00] text-xs sm:text-base md:text-xl whitespace-nowrap origin-center"
             style={{
-              textShadow: "2px 2px 0px rgb(63, 42, 0)",
+              textShadow: "2px 2px 0px #3F3F00",
               animation: "splash-pulse 1.5s ease-in-out infinite",
             }}
           >
