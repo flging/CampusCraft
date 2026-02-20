@@ -41,7 +41,7 @@ export default function HeroSection() {
             alt="CampusCraft"
             width={500}
             height={200}
-            className="w-[280px] sm:w-[360px] md:w-[500px] h-auto scale-y-[0.85] drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)]"
+            className="w-[280px] sm:w-[360px] md:w-[500px] h-auto scale-y-50 drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)]"
             priority
           />
         </h1>
