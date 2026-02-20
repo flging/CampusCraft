@@ -73,7 +73,7 @@ export default function HeroSection() {
           <span className="inline-block font-pixel text-mc-green text-sm md:text-lg px-4 py-2 border border-mc-green/40 bg-mc-green/10"
             style={{ textShadow: "1px 1px 0px rgba(0,80,0,0.5)" }}
           >
-            3월 3일 서버 오픈 확정!
+            3월 3일 서버 오픈 예정!
           </span>
         </div>
 
