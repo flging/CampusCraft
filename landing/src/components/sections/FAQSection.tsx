@@ -37,9 +37,10 @@ function FAQItem({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <p className="px-5 pb-4 text-mc-gray text-xs font-pixel leading-relaxed">
-          {answer}
-        </p>
+        <p
+          className="px-5 pb-4 text-mc-gray text-xs font-pixel leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
       </div>
     </div>
   );

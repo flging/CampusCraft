@@ -39,4 +39,9 @@ export const faqItems: FAQItem[] = [
     answer:
       "대학교 이메일 인증을 완료하면, 이메일 도메인을 기반으로 소속 대학교 팀에 자동 배정됩니다. 예를 들어 @snu.ac.kr 이메일이면 서울대 팀에 배정됩니다.",
   },
+  {
+    question: "닉네임을 잘못 입력했는데 변경할 수 있나요?",
+    answer:
+      '네, 변경할 수 있습니다! <a href="/change-nickname" class="text-mc-aqua underline">닉네임 변경 페이지</a>에서 사전신청 시 사용한 이메일을 입력하면 변경 링크를 받을 수 있습니다.',
+  },
 ];

@@ -114,6 +114,15 @@ export default function PreRegisterForm() {
               <p className="text-mc-dark-gray text-[10px] font-pixel text-center mt-4">
                 * ac.kr 또는 .edu 도메인 이메일만 사용할 수 있습니다
               </p>
+              <p className="text-mc-dark-gray text-[10px] font-pixel text-center mt-2">
+                잘못된 닉네임으로 인증을 받으셨나요?{" "}
+                <a
+                  href="/change-nickname"
+                  className="text-mc-aqua underline hover:brightness-125 transition-all"
+                >
+                  닉네임 변경하기
+                </a>
+              </p>
             </form>
           </ScrollReveal>
         )}
