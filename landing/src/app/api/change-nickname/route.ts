@@ -226,33 +226,103 @@ function buildChangeNicknameEmail(
   return `
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background-color:#1a1a2e;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
-  <div style="max-width:480px;margin:0 auto;padding:40px 20px;">
-    <div style="background-color:#12121f;border:2px solid #333;border-radius:4px;padding:32px;text-align:center;">
-      <h1 style="color:#FFAA00;font-size:24px;margin:0 0 8px 0;">⛏️ CampusCraft</h1>
-      <p style="color:#AAAAAA;font-size:12px;margin:0 0 32px 0;">닉네임 변경 요청</p>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#2b2b2b;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#2b2b2b;">
+    <tr><td align="center" style="padding:40px 16px;">
+      <table role="presentation" width="480" cellpadding="0" cellspacing="0" style="max-width:480px;width:100%;">
 
-      <p style="color:#FFFFFF;font-size:16px;margin:0 0 8px 0;">
-        현재 닉네임: <span style="color:#55FF55;">${currentNickname}</span>
-      </p>
-      <p style="color:#AAAAAA;font-size:14px;margin:0 0 24px 0;">
-        닉네임을 변경하려면 아래 버튼을 클릭해주세요.
-      </p>
+        <!-- MC 인벤토리 스타일 카드 -->
+        <tr><td style="background-color:#c6c6c6;border:3px solid #000;border-top-color:#fff;border-left-color:#fff;padding:4px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#8b8b8b;border:2px solid #000;border-top-color:#555;border-left-color:#555;">
+            <tr><td style="padding:28px 24px;">
 
-      <a href="${changeUrl}"
-         style="display:inline-block;background-color:#00AA00;color:#FFFFFF;text-decoration:none;padding:14px 32px;font-size:16px;font-weight:bold;border-radius:4px;border-bottom:4px solid #006600;">
-        닉네임 변경하기
-      </a>
+              <!-- 로고 영역 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr><td style="text-align:center;padding:0 0 6px 0;">
+                  <span style="color:#FFAA00;font-size:26px;font-weight:bold;letter-spacing:2px;text-shadow:2px 2px 0px #3f2a00;">⛏️ CampusCraft</span>
+                </td></tr>
+                <tr><td style="text-align:center;padding:0 0 24px 0;">
+                  <span style="color:#3f3f3f;font-size:11px;letter-spacing:2px;">닉네임 변경 요청</span>
+                </td></tr>
+              </table>
 
-      <p style="color:#555555;font-size:11px;margin:24px 0 0 0;">
-        이 링크는 1시간 동안 유효합니다.
-      </p>
-      <p style="color:#555555;font-size:11px;margin:8px 0 0 0;">
-        본인이 요청하지 않으셨다면 이 이메일을 무시해주세요.
-      </p>
-    </div>
-  </div>
+              <!-- 구분선 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px 0;">
+                <tr>
+                  <td style="border-bottom:2px solid #555;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="border-bottom:2px solid #aaa;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- 현재 닉네임 (인벤토리 슬롯 스타일) -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 20px 0;">
+                <tr><td align="center">
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="background-color:#282828;border:2px solid #000;border-top-color:#3c3c3c;border-left-color:#3c3c3c;">
+                    <tr>
+                      <td style="padding:10px 14px;vertical-align:middle;background-color:#1a1a1a;border:1px solid #3c3c3c;">
+                        <span style="font-size:24px;">🏷️</span>
+                      </td>
+                      <td style="padding:10px 18px 10px 14px;vertical-align:middle;">
+                        <div style="color:#AAAAAA;font-size:11px;letter-spacing:1px;">현재 닉네임</div>
+                        <div style="color:#55FF55;font-size:17px;margin-top:2px;font-weight:bold;">${currentNickname}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td></tr>
+              </table>
+
+              <!-- 본문 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr><td style="padding:0 0 20px 0;text-align:center;">
+                  <span style="color:#AAAAAA;font-size:13px;">닉네임을 변경하려면 아래 버튼을 클릭해주세요.</span>
+                </td></tr>
+              </table>
+
+              <!-- MC 버튼 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr><td align="center">
+                  <a href="${changeUrl}" target="_blank"
+                     style="display:inline-block;text-decoration:none;background-color:#4a7d2e;color:#FFFFFF;font-size:16px;font-weight:bold;padding:12px 40px;letter-spacing:2px;border:3px solid #1a3a0a;border-top-color:#6aad3e;border-left-color:#6aad3e;text-shadow:2px 2px 0px rgba(0,0,0,0.4);">
+                    닉네임 변경하기
+                  </a>
+                </td></tr>
+              </table>
+
+              <!-- 구분선 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:28px 0 0 0;">
+                <tr>
+                  <td style="border-bottom:2px solid #555;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="border-bottom:2px solid #aaa;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- 하단 안내 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0 0;">
+                <tr><td style="text-align:center;padding:0 0 4px 0;">
+                  <span style="color:#555;font-size:11px;">⏰ 이 링크는 1시간 동안 유효합니다.</span>
+                </td></tr>
+                <tr><td style="text-align:center;">
+                  <span style="color:#555;font-size:11px;">본인이 요청하지 않으셨다면 이 이메일을 무시해주세요.</span>
+                </td></tr>
+              </table>
+
+            </td></tr>
+          </table>
+        </td></tr>
+
+        <!-- 푸터 -->
+        <tr><td style="text-align:center;padding:20px 0 0 0;">
+          <span style="color:#555;font-size:10px;letter-spacing:1px;">campuscraft.xyz</span>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
 </body>
 </html>`.trim();
 }
