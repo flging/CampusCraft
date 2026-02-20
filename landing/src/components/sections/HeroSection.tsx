@@ -34,25 +34,28 @@ export default function HeroSection() {
 
       {/* 메인 콘텐츠 — CSS 애니메이션 */}
       <div className="relative z-10 text-center animate-[fadeInUp_0.8s_ease-out_forwards]">
-        {/* 로고 이미지 */}
-        <h1 className="animate-[scaleIn_0.6s_ease-out_0.2s_both] -mb-[25%]">
-          <Image
-            src="/logo.png"
-            alt="CampusCraft"
-            width={500}
-            height={200}
-            className="w-[280px] sm:w-[360px] md:w-[500px] h-auto scale-y-50 drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)]"
-            priority
-          />
-        </h1>
-
-        {/* 훅 텍스트 */}
-        <p
-          className="font-pixel text-mc-gold text-2xl sm:text-3xl md:text-5xl mt-2 md:mt-4 animate-[fadeInUp_0.5s_ease-out_0.6s_both]"
-          style={{ textShadow: "2px 2px 0px rgb(63, 42, 0)" }}
-        >
-          CC할 사람!
-        </p>
+        {/* 로고 + 스플래시 텍스트 */}
+        <div className="relative inline-block animate-[scaleIn_0.6s_ease-out_0.2s_both] -mb-[25%]">
+          <h1>
+            <Image
+              src="/logo.png"
+              alt="CampusCraft"
+              width={500}
+              height={200}
+              className="w-[280px] sm:w-[360px] md:w-[500px] h-auto scale-y-50 drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)]"
+              priority
+            />
+          </h1>
+          <p
+            className="absolute -right-4 sm:-right-6 md:-right-8 -bottom-1 sm:-bottom-2 md:-bottom-4 font-pixel-bold text-mc-gold text-sm sm:text-lg md:text-2xl whitespace-nowrap origin-center"
+            style={{
+              textShadow: "2px 2px 0px rgb(63, 42, 0)",
+              animation: "splash-pulse 1.5s ease-in-out infinite",
+            }}
+          >
+            새 학기엔 CC하자!
+          </p>
+        </div>
 
         {/* 부제 */}
         <p
