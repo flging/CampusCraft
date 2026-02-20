@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/api/", "/verify"],
     },
-    sitemap: "https://campuscraft.example.com/sitemap.xml",
+    sitemap: "https://campuscraft.xyz/sitemap.xml",
   };
 }

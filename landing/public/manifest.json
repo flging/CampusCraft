@@ -1,0 +1,21 @@
+{
+  "name": "CampusCraft - 대학생 전용 마인크래프트 서버",
+  "short_name": "CampusCraft",
+  "description": "대학교 이메일 인증으로 소속 대학교 팀에 자동 배정! 대학생 전용 마인크래프트 서버",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
