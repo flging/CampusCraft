@@ -78,6 +78,11 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.json",
+  verification: {
+    other: {
+      "naver-site-verification": "963bb9447f46b41f026f5a8606b3cefcb76d5a94",
+    },
+  },
 };
 
 const jsonLd = {
