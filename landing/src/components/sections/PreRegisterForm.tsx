@@ -46,15 +46,18 @@ export default function PreRegisterForm() {
           <ScrollReveal>
             <div className="text-center p-8 bg-black/20 border border-mc-green/20">
               <p className="text-mc-green text-lg font-pixel-bold mb-2">
-                사전 신청 완료!
+                인증 이메일을 확인해주세요!
               </p>
               {form.universityName && (
                 <p className="text-mc-aqua text-sm font-pixel mb-4">
                   {form.universityName} 팀으로 배정될 예정입니다
                 </p>
               )}
+              <p className="text-mc-gray text-xs font-pixel mb-2">
+                입력하신 이메일로 인증 링크를 보내드렸습니다.
+              </p>
               <p className="text-mc-gray text-xs font-pixel mb-6">
-                3월 3일 오픈일에 이메일로 접속 안내드리겠습니다.
+                메일이 보이지 않으면 스팸 폴더를 확인해주세요.
               </p>
               <MinecraftButton size="sm" onClick={reset}>
                 다른 계정으로 신청
@@ -119,7 +122,7 @@ export default function PreRegisterForm() {
       <MinecraftToast
         show={form.isSuccess}
         title="도전 과제 달성!"
-        description="사전 신청 완료!"
+        description="인증 이메일을 확인해주세요!"
         onClose={handleToastClose}
       />
     </section>
