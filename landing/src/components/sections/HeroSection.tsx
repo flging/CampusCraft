@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import MinecraftButton from "@/components/ui/MinecraftButton";
 
 export default function HeroSection() {
@@ -33,23 +34,16 @@ export default function HeroSection() {
 
       {/* 메인 콘텐츠 — CSS 애니메이션 */}
       <div className="relative z-10 text-center animate-[fadeInUp_0.8s_ease-out_forwards]">
-        {/* 로고 텍스트 */}
-        <h1
-          className="font-title text-3xl sm:text-4xl md:text-6xl text-white tracking-wider mb-2 animate-[scaleIn_0.6s_ease-out_0.2s_both]"
-          style={{
-            textShadow: [
-              "-2px -2px 0px #555555",
-              "2px -2px 0px #555555",
-              "-2px 2px 0px #555555",
-              "2px 2px 0px #555555",
-              "3px 3px 0px #444444",
-              "4px 4px 0px #333333",
-              "5px 5px 0px #222222",
-              "6px 8px 6px rgba(0,0,0,0.5)",
-            ].join(", "),
-          }}
-        >
-          CampusCraft
+        {/* 로고 이미지 */}
+        <h1 className="animate-[scaleIn_0.6s_ease-out_0.2s_both]">
+          <Image
+            src="/logo.png"
+            alt="CampusCraft"
+            width={500}
+            height={200}
+            className="w-[280px] sm:w-[360px] md:w-[500px] h-auto drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)]"
+            priority
+          />
         </h1>
 
         {/* 훅 텍스트 */}
