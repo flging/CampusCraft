@@ -17,8 +17,8 @@ const features = [
   },
   {
     icon: "🛡️",
-    title: "팀 별 땅 보호",
-    description: "Land 플러그인으로 팀 별 영역을 자동 보호. 우리 학교 땅은 안전하게.",
+    title: "학교별 전용 부지",
+    description: "학교마다 전용 부지를 선착순 선택. 우리 학교만의 공간에서 자유롭게.",
     color: "#FFAA00",
   },
   {
