@@ -77,6 +77,21 @@ export default function FAQSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={faqItems.length * 0.05}>
+          <p className="text-mc-dark-gray text-xs font-pixel text-center mt-8">
+            그 외 문의는{" "}
+            <a
+              href="https://instagram.com/campuscraft2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-mc-aqua underline hover:text-mc-gold transition-colors"
+            >
+              @campuscraft2026
+            </a>
+            {" "}으로 DM 부탁드립니다.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
