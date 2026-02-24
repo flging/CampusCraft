@@ -1,0 +1,20 @@
+name: CampusCraft
+version: "${version}"
+main: xyz.campuscraft.plugin.CampusCraftPlugin
+api-version: "1.21"
+description: 대학 대항전 마인크래프트 서버 플러그인
+authors: [CampusCraft]
+
+commands:
+  cc:
+    description: CampusCraft 관리 명령어
+    usage: /cc <sync|info|stats>
+    permission: campuscraft.admin
+  tc:
+    description: 팀 채팅
+    usage: /tc <메시지>
+
+permissions:
+  campuscraft.admin:
+    description: CampusCraft 관리 권한
+    default: op

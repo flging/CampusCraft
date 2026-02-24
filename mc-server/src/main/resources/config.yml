@@ -1,0 +1,15 @@
+# CampusCraft Plugin Configuration
+
+supabase:
+  url: "https://your-project.supabase.co"
+  api-key: "your-anon-key"
+  table: "pre_registrations"
+
+sync:
+  interval-minutes: 5
+
+messages:
+  kick-not-registered: "&c[CampusCraft] 사전신청이 확인되지 않았습니다.\n&ecampuscraft.xyz 에서 사전신청 후 접속해주세요."
+  kick-not-verified: "&c[CampusCraft] 이메일 인증이 완료되지 않았습니다.\n&e이메일을 확인해주세요."
+  welcome-first: "&a[CampusCraft] &f{player}님, {university} 팀에 오신 것을 환영합니다!"
+  welcome-back: "&a[CampusCraft] &f{player}님이 접속했습니다. [{tag}]"
