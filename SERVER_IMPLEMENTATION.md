@@ -192,7 +192,7 @@ public void updateClaimLimit(String universityTag, int totalScore) {
 | **팀 배정** | `TeamManager` | 이메일 도메인 기반 스코어보드 팀 자동 배정 |
 | **과잠 시스템** | `GwajamManager`, `GwajamProtectListener` | 대학 디자인 다이아 갑옷 지급, 탈착/드롭/이동 방지 (사전등록자 커스터마이징 가능) |
 | **채팅** | `PlayerChatListener`, `TeamChatCommand` | `[대학태그] 닉네임` 형식, `/tc`로 팀 전용 채팅 |
-| **대학 DB** | `UniversityManager`, `UniversityInfo` | 29개 대학 정보 (태그, 이름, 도메인, 색상) |
+| **대학 DB** | `UniversityManager`, `UniversityInfo` | 30개 대학 정보 (태그, 이름, 도메인, 색상) |
 | **설정** | `PluginConfig` | Supabase URL/키, 동기화 간격 등 |
 | **명령어** | `CampusCraftCommand` | `/cc sync`, `/cc reload` 등 관리 명령어 |
 

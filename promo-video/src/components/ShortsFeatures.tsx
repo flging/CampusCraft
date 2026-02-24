@@ -13,7 +13,7 @@ interface FeatureBeat {
 const beats: FeatureBeat[] = [
   { emoji: "📧", text: "학교 이메일 인증", color: MC.GREEN, delay: 0 },
   { emoji: "⚔️", text: "학교 팀 자동 배정", color: MC.AQUA, delay: 30 },
-  { emoji: "🏆", text: "학교 대항전!", color: MC.GOLD, delay: 60 },
+  { emoji: "🏆", text: "학교별 전용 부지!", color: MC.GOLD, delay: 60 },
 ];
 
 export const ShortsFeatures: React.FC = () => {
