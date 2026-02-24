@@ -199,6 +199,42 @@ function buildVerificationEmail(
                 </tr>
               </table>
 
+              <!-- 디스코드 안내 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0 0 0;">
+                <tr><td align="center">
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="background-color:#282828;border:2px solid #000;border-top-color:#3c3c3c;border-left-color:#3c3c3c;width:100%;">
+                    <tr>
+                      <td style="padding:10px 14px;vertical-align:middle;background-color:#1a1a1a;border:1px solid #3c3c3c;width:48px;text-align:center;">
+                        <span style="font-size:24px;">🎮</span>
+                      </td>
+                      <td style="padding:10px 18px 10px 14px;vertical-align:middle;">
+                        <div style="color:#5865F2;font-size:11px;letter-spacing:1px;">STEP 2</div>
+                        <div style="color:#FFFFFF;font-size:14px;margin-top:2px;font-weight:bold;">디스코드 서버에 참가하세요!</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td></tr>
+                <tr><td style="padding:12px 0 0 0;text-align:center;">
+                  <span style="color:#AAAAAA;font-size:12px;">이메일 인증 후 디스코드에서 다른 플레이어들과 소통하세요.</span>
+                </td></tr>
+                <tr><td align="center" style="padding:14px 0 0 0;">
+                  <a href="https://discord.gg/kPx9ChGvnQ" target="_blank"
+                     style="display:inline-block;text-decoration:none;background-color:#5865F2;color:#FFFFFF;font-size:14px;font-weight:bold;padding:10px 32px;letter-spacing:1px;border:3px solid #3a42b0;border-top-color:#7983f5;border-left-color:#7983f5;text-shadow:1px 1px 0px rgba(0,0,0,0.3);">
+                    디스코드 참가하기
+                  </a>
+                </td></tr>
+              </table>
+
+              <!-- 구분선 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 0 0;">
+                <tr>
+                  <td style="border-bottom:2px solid #555;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="border-bottom:2px solid #aaa;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
               <!-- 하단 안내 -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0 0;">
                 <tr><td style="text-align:center;padding:0 0 4px 0;">

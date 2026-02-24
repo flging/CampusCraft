@@ -53,17 +53,31 @@ function VerifyContent() {
             <p className="text-mc-green text-lg font-pixel-bold mb-2">
               이메일 인증 완료!
             </p>
-            <p className="text-mc-gray text-sm font-pixel mb-6">
+            <p className="text-mc-gray text-sm font-pixel mb-4">
               사전 신청이 확정되었습니다.
               <br />
               3월 3일 오픈일에 접속 안내를 보내드리겠습니다.
             </p>
-            <a
-              href="/"
-              className="inline-block bg-mc-dark-green text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#006600] hover:brightness-110 transition-all"
-            >
-              홈으로 돌아가기
-            </a>
+            <p className="text-mc-gray text-xs font-pixel mb-6">
+              디스코드에 참가해서 다른 플레이어들과 소통하세요!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://discord.gg/kPx9ChGvnQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#3a42b0] hover:brightness-110 transition-all"
+                style={{ backgroundColor: "#5865F2" }}
+              >
+                디스코드 참가하기
+              </a>
+              <a
+                href="/"
+                className="inline-block bg-mc-dark-green text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#006600] hover:brightness-110 transition-all"
+              >
+                홈으로 돌아가기
+              </a>
+            </div>
           </>
         )}
 
@@ -72,17 +86,31 @@ function VerifyContent() {
             <p className="text-mc-aqua text-lg font-pixel-bold mb-2">
               이미 인증된 이메일입니다
             </p>
-            <p className="text-mc-gray text-sm font-pixel mb-6">
+            <p className="text-mc-gray text-sm font-pixel mb-4">
               이메일 인증이 이미 완료되었습니다.
               <br />
               3월 3일 오픈일에 접속 안내를 보내드리겠습니다.
             </p>
-            <a
-              href="/"
-              className="inline-block bg-mc-dark-green text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#006600] hover:brightness-110 transition-all"
-            >
-              홈으로 돌아가기
-            </a>
+            <p className="text-mc-gray text-xs font-pixel mb-6">
+              아직 디스코드에 참가하지 않으셨다면 지금 참가하세요!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://discord.gg/kPx9ChGvnQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#3a42b0] hover:brightness-110 transition-all"
+                style={{ backgroundColor: "#5865F2" }}
+              >
+                디스코드 참가하기
+              </a>
+              <a
+                href="/"
+                className="inline-block bg-mc-dark-green text-white font-pixel text-sm px-6 py-3 border-b-4 border-[#006600] hover:brightness-110 transition-all"
+              >
+                홈으로 돌아가기
+              </a>
+            </div>
           </>
         )}
 
