@@ -1,6 +1,6 @@
 # CampusCraft 서버 구현 & 운영 기술 문서
 
-> 동시접속 50~200명 중규모 대학 대항전 마인크래프트 서버 기술 가이드
+> 동시접속 50~200명 중규모 대학생 마인크래프트 서버 기술 가이드
 
 ---
 
@@ -160,24 +160,20 @@ public void updateClaimLimit(String universityTag, int totalScore) {
 
 ### 2.5 초기 스폰 영역 배치 전략
 
-방사형 배치로 대학 간 균등한 거리 보장:
+**사전등록 선착순 부지 선택 방식:**
+
+운영진이 맵에 미리 여러 부지를 등록해두고, 사전등록 후 서버에 입장한 대학교의 대표가 **선착순으로 원하는 부지를 선택**하는 방식.
 
 ```
-             북
-              │
-    충남대 ── │ ── 고려대
-   /          │          \
-  전남대      │       연세대
-  │      ┌────┼────┐      │
-서──  부산대 │ 스폰  │ 서울대  ──동
-  │      └────┼────┘      │
-  경북대      │       성균관대
-   \          │          /
-    KAIST ── │ ── 한양대
-              │
-             남
+부지 선택 플로우:
+1. 운영진이 맵 내 부지 후보를 사전 등록 (방사형 배치, 균등 거리)
+2. 사전등록한 유저가 서버 입장
+3. 해당 대학의 첫 입장자(대표)가 미선점 부지 목록에서 선택
+4. 선택 완료 → 해당 부지가 대학 Land로 확정
+5. 이후 같은 대학 유저는 해당 Land에 자동 배정
 ```
 
+- 사전등록으로 먼저 들어온 대학이 좋은 위치를 선점할 수 있어 사전등록 유인 효과
 - 대학 간 최소 거리: 2000블록 (최적의 값으로 조정 필요)
 - 초기 청크 클레임: 3×3 (48×48 블록)
 - `Chunky`로 사전 청크 생성 → 접속 시 렉 방지
@@ -194,8 +190,8 @@ public void updateClaimLimit(String universityTag, int totalScore) {
 |------|--------|------|
 | **화이트리스트** | `WhitelistManager`, `WhitelistSyncTask` | Supabase 5분 주기 동기화, 미인증 유저 킥 |
 | **팀 배정** | `TeamManager` | 이메일 도메인 기반 스코어보드 팀 자동 배정 |
-| **과잠 시스템** | `GwajamManager`, `GwajamProtectListener` | 대학 색상 가죽 갑옷 지급, 탈착/드롭/이동 방지 |
-| **채팅** | `PlayerChatListener`, `TeamChatCommand` | `[학과] 닉네임` 형식 (학과 표시 on 시), `/tc`로 팀 전용 채팅 |
+| **과잠 시스템** | `GwajamManager`, `GwajamProtectListener` | 대학 디자인 다이아 갑옷 지급, 탈착/드롭/이동 방지 (사전등록자 커스터마이징 가능) |
+| **채팅** | `PlayerChatListener`, `TeamChatCommand` | `[대학태그] 닉네임` 형식, `/tc`로 팀 전용 채팅 |
 | **대학 DB** | `UniversityManager`, `UniversityInfo` | 29개 대학 정보 (태그, 이름, 도메인, 색상) |
 | **설정** | `PluginConfig` | Supabase URL/키, 동기화 간격 등 |
 | **명령어** | `CampusCraftCommand` | `/cc sync`, `/cc reload` 등 관리 명령어 |
@@ -226,40 +222,37 @@ compileOnly("me.angeschossen:LandsAPI:7.x.x")
 
 ### 3.3 CampusCraft Department (신규)
 
-> 학과 칭호 & 학년 레벨링 시스템
+> 대학별 학과 칭호 시스템
 
-**학과 칭호:**
-- `/department set <학과명>` — 학과 설정
+**학과 목록 관리:**
+- 대학교별 학과 목록을 사전 조사하여 DB에 등록
+- 플레이어는 소속 대학의 학과 목록에서 **선택**하여 설정 (자유 입력 불가)
+- `/department` — 소속 대학 학과 목록 GUI 표시, 선택
 - `/department toggle` — 닉네임 위 학과 표시 on/off
-- TAB 플러그인 연동: 탭 리스트 및 머리 위 네임태그에 학과 표시
-- 채팅 포맷 통합: `[컴퓨터과학과] sq45: 안녕하세요!`
 
-**학년 레벨링:**
-- 서버 최초 접속 시 1학년 부여
-- 활동 기반 경험치 누적 → 학년 승급
-- 학년별 도구 제한 해금
-
-| 학년 | 필요 XP | 해금 |
-|------|---------|------|
-| 1학년 | 0 | 기본 도구 |
-| 2학년 | 1,000 | 철 도구 이상, 추가 홈 |
-| 3학년 | 5,000 | 다이아 도구 이상 |
-| 4학년 | 15,000 | 네더라이트 도구, 특수 칭호 |
-
-**경험치 획득원:**
-- 광물 채굴, 블록 설치, 몬스터 처치, 자원 교환, 접속 시간 보너스
+**표시 방식:**
+- **기본:** `[SNU] 닉네임` (대학 태그 + 닉네임)
+- **학과 on:** 닉네임 위에 학과명 별도 표시 (머리 위 네임태그)
+- TAB 플러그인 연동: 탭 리스트에도 학과 표시 (on 상태일 때)
 
 **DB 스키마 추가:**
 
 ```sql
+-- 대학별 학과 목록
+CREATE TABLE university_departments (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    university_tag VARCHAR NOT NULL,
+    department_name VARCHAR NOT NULL,
+    UNIQUE(university_tag, department_name)
+);
+
+-- 플레이어 학과 설정
 CREATE TABLE player_profiles (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     minecraft_nickname VARCHAR NOT NULL UNIQUE,
     university_tag VARCHAR NOT NULL,
-    department VARCHAR,              -- 학과명
-    department_visible BOOLEAN DEFAULT true,  -- 칭호 표시 여부
-    grade INT NOT NULL DEFAULT 1,    -- 학년 (1~4)
-    experience BIGINT NOT NULL DEFAULT 0,  -- 누적 경험치
+    department VARCHAR REFERENCES university_departments(department_name),
+    department_visible BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT now(),
     updated_at TIMESTAMP DEFAULT now()
 );
