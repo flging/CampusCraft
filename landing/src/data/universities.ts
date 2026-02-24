@@ -23,7 +23,11 @@ export const universities: University[] = [
   { id: "hongik", name: "홍익대학교", tag: "HONGIK", colorHex: "#E31C3D", emailDomains: ["hongik.ac.kr", "g.hongik.ac.kr"] },
   { id: "konkuk", name: "건국대학교", tag: "KONKUK", colorHex: "#006747", emailDomains: ["konkuk.ac.kr"] },
   { id: "dongguk", name: "동국대학교", tag: "DONGGUK", colorHex: "#F37321", emailDomains: ["dongguk.edu", "dgu.ac.kr"] },
+  { id: "kookmin", name: "국민대학교", tag: "KOOKMIN", colorHex: "#002D56", emailDomains: ["kookmin.ac.kr"] },
   { id: "sejong", name: "세종대학교", tag: "SEJONG", colorHex: "#8B0000", emailDomains: ["sju.ac.kr"] },
+  { id: "dankook", name: "단국대학교", tag: "DANKOOK", colorHex: "#00467F", emailDomains: ["dankook.ac.kr"] },
+  { id: "inha", name: "인하대학교", tag: "INHA", colorHex: "#004B8D", emailDomains: ["inha.ac.kr", "inha.edu"] },
+  { id: "ajou", name: "아주대학교", tag: "AJOU", colorHex: "#0038A8", emailDomains: ["ajou.ac.kr"] },
 
   // 과학기술특성화대학
   { id: "kaist", name: "KAIST", tag: "KAIST", colorHex: "#004A9C", emailDomains: ["kaist.ac.kr"] },

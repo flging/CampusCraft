@@ -12,7 +12,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "어떤 대학이 참여할 수 있나요?",
     answer:
-      "현재 서울대, 고려대, 연세대, KAIST, POSTECH 등 국내 30개 주요 대학을 지원합니다. 향후 더 많은 대학이 추가될 예정입니다.",
+      "현재 서울대, 고려대, 연세대, KAIST, POSTECH 등 국내 34개 주요 대학을 지원합니다. 향후 더 많은 대학이 추가될 예정입니다.",
   },
   {
     question: "마인크래프트 정품이 필요한가요?",

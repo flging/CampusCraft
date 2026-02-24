@@ -7,7 +7,7 @@ export const UniversityShowcase: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // 점점 빨라지는 등장 타이밍 — 30개 태그를 ~90프레임 안에 모두 표시
+  // 점점 빨라지는 등장 타이밍 — 34개 태그를 ~90프레임 안에 모두 표시
   const getDelay = (index: number): number => {
     let total = 5;
     for (let i = 0; i < index; i++) {
@@ -46,7 +46,7 @@ export const UniversityShowcase: React.FC = () => {
           }),
         }}
       >
-        전국 30개 대학 참여가능
+        전국 34개 대학 참여가능
       </div>
 
       {/* 태그 그리드 — 마크 네임태그 스타일 (반투명 검정 배경 + 팀 색상 텍스트) */}

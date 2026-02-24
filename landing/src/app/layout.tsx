@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "CampusCraft - 대학생 전용 마인크래프트 서버 | 사전신청",
   description:
-    "대학교 이메일 인증으로 소속 대학교 팀에 자동 배정! 30개 대학이 함께하는 대학생 전용 마인크래프트 서버 CampusCraft. 지금 사전신청하고 우선 입장권을 받으세요.",
+    "대학교 이메일 인증으로 소속 대학교 팀에 자동 배정! 34개 대학이 함께하는 대학생 전용 마인크래프트 서버 CampusCraft. 지금 사전신청하고 우선 입장권을 받으세요.",
   keywords: [
     "마인크래프트",
     "대학생",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CampusCraft - 대학생 전용 마인크래프트 서버",
     description:
-      "ac.kr 이메일 인증 한 번이면 끝! 소속 대학교 팀에 자동 배정. 30개 대학이 함께하는 마인크래프트 서버.",
+      "ac.kr 이메일 인증 한 번이면 끝! 소속 대학교 팀에 자동 배정. 34개 대학이 함께하는 마인크래프트 서버.",
     type: "website",
     locale: "ko_KR",
     url: SITE_URL,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CampusCraft - 대학생 전용 마인크래프트 서버",
     description:
-      "ac.kr 이메일 인증 한 번이면 끝! 30개 대학이 함께하는 마인크래프트 서버.",
+      "ac.kr 이메일 인증 한 번이면 끝! 34개 대학이 함께하는 마인크래프트 서버.",
     images: ["/og-image.png"],
   },
   robots: {

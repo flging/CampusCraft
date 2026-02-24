@@ -26,7 +26,11 @@ public class UniversityManager {
         register("hongik", "홍익대학교", "HONGIK", "#E31C3D");
         register("konkuk", "건국대학교", "KONKUK", "#006747");
         register("dongguk", "동국대학교", "DONGGUK", "#F37321");
+        register("kookmin", "국민대학교", "KOOKMIN", "#002D56");
         register("sejong", "세종대학교", "SEJONG", "#8B0000");
+        register("dankook", "단국대학교", "DANKOOK", "#00467F");
+        register("inha", "인하대학교", "INHA", "#004B8D");
+        register("ajou", "아주대학교", "AJOU", "#0038A8");
         register("kaist", "KAIST", "KAIST", "#004A9C");
         register("postech", "POSTECH", "POSTECH", "#CC0000");
         register("gist", "GIST", "GIST", "#1B5E20");

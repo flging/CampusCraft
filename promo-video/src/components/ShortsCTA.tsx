@@ -27,8 +27,8 @@ export const ShortsCTA: React.FC = () => {
 
   // 카운터 (0~30까지 빠르게)
   const countTarget = Math.min(
-    30,
-    Math.floor(interpolate(frame, [5, 35], [0, 30], { extrapolateRight: "clamp", extrapolateLeft: "clamp" }))
+    34,
+    Math.floor(interpolate(frame, [5, 35], [0, 34], { extrapolateRight: "clamp", extrapolateLeft: "clamp" }))
   );
 
   // CTA 요소들

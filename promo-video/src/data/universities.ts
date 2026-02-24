@@ -22,7 +22,11 @@ export const universities: University[] = [
   { id: "hongik", name: "홍익대학교", tag: "HONGIK", colorHex: "#E31C3D" },
   { id: "konkuk", name: "건국대학교", tag: "KONKUK", colorHex: "#006747" },
   { id: "dongguk", name: "동국대학교", tag: "DONGGUK", colorHex: "#F37321" },
+  { id: "kookmin", name: "국민대학교", tag: "KOOKMIN", colorHex: "#002D56" },
   { id: "sejong", name: "세종대학교", tag: "SEJONG", colorHex: "#8B0000" },
+  { id: "dankook", name: "단국대학교", tag: "DANKOOK", colorHex: "#00467F" },
+  { id: "inha", name: "인하대학교", tag: "INHA", colorHex: "#004B8D" },
+  { id: "ajou", name: "아주대학교", tag: "AJOU", colorHex: "#0038A8" },
 
   // 과학기술특성화대학
   { id: "kaist", name: "KAIST", tag: "KAIST", colorHex: "#004A9C" },
