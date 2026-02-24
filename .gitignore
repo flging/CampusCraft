@@ -11,3 +11,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 *.mov
+
+# MC Server
+mc-server/server/
+mc-server/build/
+mc-server/.gradle/
